@@ -1,0 +1,84 @@
+﻿main{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.main-desktop {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.params-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.params {
+    width: 405px;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+.show-weather {
+    border-radius: 8px;
+    background-color: rgba(53, 95, 202, 1);
+    border: none;
+    width: 620px;
+    height: 90px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.results {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(102, 102, 102, 0.418);
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.text-information {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-info{
+    display: flex;
+    padding: 0 20px;
+}
+
+.delete-card{
+    height: 40px;
+    font-size: 30px;
+}
+
+.cards{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}

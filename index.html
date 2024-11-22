@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather App</title>
+        <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full" defer></script>
+        <script type="module" src="./main.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <form id='main-form' class="main-desktop">
+                <div id="latitude-form" class="params-container">
+                    <p>Широта</p>
+                    <input id="latitude" class='params' type="text" />
+                </div>
+                <div id="longitude-form" class="params-container">
+                    <p>Долгота</p>
+                    <input id="longitude" class="params" type="text" />
+                </div>
+                <button class="show-weather">Показать погоду</button>
+            </form>
+            <div class="cards">
+                    
+            </div>
+        </main>
+    </body>
+</html>
