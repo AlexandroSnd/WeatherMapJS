@@ -1,7 +1,8 @@
 ﻿import { getMap } from './map.js';
 import { isUserInputCorrect } from './checkUserInput.js';
 
-const apiKey = 'f623081260f363d8e8a15fe44e841483';
+
+const apiKey = '';
 
 const form = document.querySelector('#main-form');
 const inputLatitude = document.querySelector('#latitude');
@@ -42,7 +43,8 @@ function createCard(data, mapId) {
 function renderCard(html) {
     const allCards = cardsContainer.querySelectorAll('.results');
     if (allCards.length >= 3) {
-        allCards[0].remove();
+        alert('Перед добавлением удалите виджет')
+        return
     }
     cardsContainer.insertAdjacentHTML('beforeend', html);
 }
