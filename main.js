@@ -18,15 +18,19 @@ async function fetchWeatherData(latitude, longitude) {
 
 // Функция для создания HTML карточки
 function createCard(data, mapId) {
+
     const icon = data.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
+    const weatherTitle = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1)
+
 
     return `
         <div class="results">
             <div class="text-information">
                 <p>${data.name}</p>
                 <p>${Math.round(data.main.temp)} °C</p>
-                <img src="${iconUrl}" alt="${data.weather[0].description}" />
+                <img class='weather-icon' src="${iconUrl}" alt="${weatherTitle}" />
+                <p>${weatherTitle}</p>
             </div>
             <div class='other-info'>
                 <p><span>Ощущается как</span> <span>${Math.round(data.main.feels_like)} °C</span></p>
@@ -34,7 +38,7 @@ function createCard(data, mapId) {
                 <p><span>Влажность:</span> <span>${data.main.humidity} %</span></p>
             </div>
             <div class="map-container">
-                <div id="${mapId}" style="width: 100%; height:400px;"></div>
+                <div class='map' id="${mapId}" style="width: 100%; height:400px;"></div>
             </div>
             <button class="delete-card">Удалить</button>
         </div>

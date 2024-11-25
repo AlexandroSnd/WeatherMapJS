@@ -25,7 +25,7 @@ p {
     gap: 1.25rem;
     flex-direction: column;
     margin: 0 auto;
-    padding: 5rem 0.5rem;
+    padding: 5rem 0;
     justify-content: center;
 }
 
@@ -34,7 +34,7 @@ p {
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
-    flex-wrap: wrap; /* Чтобы элементы не выходили за пределы */
+    flex-wrap: wrap;
 }
 
 .params {
@@ -42,7 +42,6 @@ p {
     font-size: 1.5rem;
     border-radius: 6px;
     border: none;
-    flex: 1 1 auto; /* Элементы занимают всю доступную ширину */
 }
 
 .show-weather {
@@ -53,7 +52,6 @@ p {
     color: white;
     cursor: pointer;
     padding: 1rem;
-    width: 100%; /* Кнопка занимает всю ширину */
 }
 
 .results {
@@ -65,7 +63,7 @@ p {
     padding: 1.25rem;
     border-radius: 10px;
     border: 1px solid black;
-    max-width: 100%; /* Ограничение ширины */
+    max-width: 100%;
 }
 
 .text-information {
@@ -73,7 +71,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.25rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .map-container {
@@ -109,6 +107,15 @@ p {
     justify-content: center;
 }
 
+.map {
+    height: 325px;
+}
+
+.weather-icon{
+    background-color: grey;
+    border-radius: 10px;
+}
+
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
     main {
@@ -117,11 +124,8 @@ p {
     }
 
     .params-container {
-        flex-direction: column; /* Поля располагаются друг под другом */
+        flex-direction: column;
         gap: 1rem;
-    }
-
-    .params {
         width: 100%;
     }
 
@@ -139,6 +143,10 @@ p {
     .text-information {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .other-info{
+        font-size: 1.3rem;
     }
 
     .delete-card {
