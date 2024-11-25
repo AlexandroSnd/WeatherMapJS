@@ -1,6 +1,8 @@
 ﻿body{
     background-color: #1f1e1e;
     color: aliceblue;
+    min-width: 800px;
+    margin: 0 auto;
 }
 
 main{
@@ -19,19 +21,18 @@ p {
     display: flex;
     gap: 50px;
     flex-direction: column;
-    width: 620px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding: 80px 20px;
 }
 
 .params-container{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
 }
 
 .params {
-    width: 405px;
     height: 50px;
     font-size: 40px;
     border-radius: 6px;
@@ -43,11 +44,10 @@ p {
     border-radius: 8px;
     background-color: rgba(53, 95, 202, 1);
     border: none;
-    width: 620px;
-    height: 90px;
     font-size: 40px;
     color: white;
     cursor: pointer;
+    padding: 20px;
 }
 .results {
     display: flex;
@@ -66,6 +66,12 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    gap: 20px;
+}
+
+.map-container{
+    display: flex;
+    
 }
 
 .map {
@@ -83,6 +89,7 @@ p {
 .other-info p{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .delete-card{
@@ -95,6 +102,7 @@ p {
 
 .cards{
     display: flex;
+    flex-wrap: wrap;
     gap: 100px;
     justify-content: center;
 }

@@ -34,7 +34,7 @@ function createCard(data, mapId) {
                 <p><span>Влажность:</span> <span>${data.main.humidity} %</span></p>
             </div>
             <div class="map-container">
-                <div id="${mapId}" style="width:500px; height:400px"></div>
+                <div id="${mapId}" style="width: 100%; height:400px;"></div>
             </div>
             <button class="delete-card">Удалить</button>
         </div>
