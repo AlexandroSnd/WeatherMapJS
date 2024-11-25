@@ -9,6 +9,7 @@ const inputLatitude = document.querySelector('#latitude');
 const inputLongitude = document.querySelector('#longitude');
 const cardsContainer = document.querySelector('.cards');
 
+
 // Функция для получения данных с API
 async function fetchWeatherData(latitude, longitude) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=ru&appid=${apiKey}`;
@@ -22,7 +23,6 @@ function createCard(data, mapId) {
     const icon = data.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
     const weatherTitle = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1)
-
 
     return `
         <div class="results">
@@ -74,8 +74,8 @@ form.onsubmit = async function (e) {
 
     const latitude = inputLatitude.value.trim();
     const longitude = inputLongitude.value.trim();
-    console.log('test')
-    // Проверяем пользовательский ввод
+
+    // Проверка пользовательского ввода
     if (!isUserInputCorrect(longitude, latitude)) {
         handleError('Некорректно введены данные');
         return;
@@ -83,7 +83,6 @@ form.onsubmit = async function (e) {
 
     try {
         const data = await fetchWeatherData(latitude, longitude);
-        console.log(data)
         if (data.message) {
             handleError('Ошибка: данные не найдены');
             return;

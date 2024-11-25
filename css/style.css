@@ -3,16 +3,16 @@
     color: aliceblue;
     margin: 0 auto;
     min-height: 900px;
-    font-size: 16px; /* Базовый размер текста */
+    font-size: 16px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 3rem; /* Используем rem для масштабируемости */
+    gap: 3rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0 1rem; /* Уменьшение отступов для маленьких экранов */
+    padding: 0 1rem;
 }
 
 p {
@@ -152,5 +152,8 @@ p {
     .delete-card {
         font-size: 1rem;
         height: 2rem;
+    }
+    .map{
+        height: 200px;
     }
 }
