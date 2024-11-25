@@ -70,7 +70,7 @@ form.onsubmit = async function (e) {
 
     const latitude = inputLatitude.value.trim();
     const longitude = inputLongitude.value.trim();
-
+    console.log('test')
     // Проверяем пользовательский ввод
     if (!isUserInputCorrect(longitude, latitude)) {
         handleError('Некорректно введены данные');
