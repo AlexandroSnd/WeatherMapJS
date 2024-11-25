@@ -2,7 +2,7 @@
 import { isUserInputCorrect } from './checkUserInput.js';
 
 
-const apiKey = '';
+const apiKey = 'f623081260f363d8e8a15fe44e841483';
 
 const form = document.querySelector('#main-form');
 const inputLatitude = document.querySelector('#latitude');
