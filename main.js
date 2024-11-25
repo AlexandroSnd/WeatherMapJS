@@ -29,7 +29,9 @@ function createCard(data, mapId) {
                 <img src="${iconUrl}" alt="${data.weather[0].description}" />
             </div>
             <div class='other-info'>
-                <p>Скорость ветра: ${data.wind.speed} м/с</p>
+                <p><span>Ощущается как</span> <span>${Math.round(data.main.feels_like)} °C</span></p>
+                <p><span>Скорость ветра:</span> <span>${data.wind.speed} м/с</span></p>
+                <p><span>Влажность:</span> <span>${data.main.humidity} %</span></p>
             </div>
             <div class="map-container">
                 <div id="${mapId}" style="width:500px; height:400px"></div>
@@ -77,13 +79,13 @@ form.onsubmit = async function (e) {
 
     try {
         const data = await fetchWeatherData(latitude, longitude);
-
+        console.log(data)
         if (data.message) {
             handleError('Ошибка: данные не найдены');
             return;
         }
 
-        const mapId = `map-${Date.now()}`;
+        const mapId = `map-${Date.now()}`; // так присваивается айдишник для карты
         const cardHtml = createCard(data, mapId);
 
         renderCard(cardHtml);

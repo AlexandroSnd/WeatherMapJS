@@ -76,7 +76,13 @@ p {
 
 .other-info{
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 0 20px;
+}
+.other-info p{
+    display: flex;
+    justify-content: space-between;
 }
 
 .delete-card{
